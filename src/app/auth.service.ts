@@ -26,7 +26,11 @@ export class AuthService {
         { headers }
       )
       .subscribe(
-        (response) => {
+        (response: any) => {
+          if (response.status === 400) {
+          } else {
+            this.router.navigate(['/login']);
+          }
           console.log(response);
         },
         (error) => {

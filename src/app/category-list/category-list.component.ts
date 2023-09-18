@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-category-list',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
+  private categoryIdSubject = new BehaviorSubject<number>(1);
+  public categoryId$ = this.categoryIdSubject.asObservable();
   categoryList: any[] = [];
 
   constructor(private http: HttpClient) {}

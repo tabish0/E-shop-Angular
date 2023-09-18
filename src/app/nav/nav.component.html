@@ -16,7 +16,10 @@
           <a class="nav-link" (click)="logout()">Logout</a>
         </li>
         <li *ngIf="authenticated" class="nav-item">
-          <a class="nav-link" routerLink="/products">Shop</a>
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li *ngIf="authenticated" class="nav-item">
+          <a class="nav-link" routerLink="/categories">Categories</a>
         </li>
       </ul>
     </div>

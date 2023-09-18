@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Signup</div>
+                <div class="card-body">
+                    <form (ngSubmit)="signupSubmit()">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name"
+                                [(ngModel)]="signupForm.name" />
+                        </div>
+                        <div>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email"
+                                [(ngModel)]="signupForm.email" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password"
+                                placeholder="Enter your password" [(ngModel)]="signupForm.password" />
+                        </div>
+                        <div>
+                            <label for="avatar" class="form-label">Avatar</label>
+                            <input type="avatar" class="form-control" name="password"
+                                placeholder="Give your avatar" [(ngModel)]="signupForm.avatar" />
+                        </div>
+                        <button type="submit" class="btn btn-secondary mt-2">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
